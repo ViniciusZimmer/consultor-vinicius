@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+:root {
+  font-family: "Interphases Pro", system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+@font-face {
+  font-family: "Interphases Pro";
+  src: url("./assets/fonts/tt_interphases_pro/TT Interphases Pro Trial Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Interphases Pro";
+  src: url("./assets/fonts/tt_interphases_pro/TT Interphases Pro Trial Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Interphases Pro Mono";
+  src: url("./assets/fonts/tt_interphases_pro/TT Interphases Pro Mono Trial Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+h1, h2 {
+  font-family: "Interphases Pro", sans-serif;
+  font-weight: bold;
+}
+
+h3 {
+  font-family: "Interphases Pro", sans-serif;
+  font-weight: 500;
+}
+
+p {
+  font-family: "Interphases Pro Mono", sans-serif;
+  font-weight: 500;
+}
