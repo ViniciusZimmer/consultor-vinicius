@@ -30,6 +30,8 @@ const Footer = () => {
               <li className="mt-2">
                 <a
                   href={constants.footer.contact.emailLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="no-underline hover:underline"
                   style={{ color: theme.colors.lightBlue }}
                 >
@@ -39,6 +41,8 @@ const Footer = () => {
               <li className="mt-2">
                 <a
                   href={constants.footer.contact.phoneLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="no-underline hover:underline"
                   style={{ color: theme.colors.lightBlue }}
                 >
@@ -48,6 +52,8 @@ const Footer = () => {
               <li className="mt-2">
                 <a
                   href={constants.footer.contact.whatsappLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="no-underline hover:underline"
                   style={{ color: theme.colors.lightBlue }}
                 >
@@ -70,6 +76,8 @@ const Footer = () => {
               <li className="mt-2">
                 <a
                   href={constants.footer.address.mapsLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="no-underline hover:underline"
                   style={{ color: theme.colors.lightBlue }}
                 >
@@ -92,6 +100,8 @@ const Footer = () => {
                 <li key={index} className="mt-2">
                   <a
                     href={link.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="no-underline hover:underline"
                     style={{ color: theme.colors.lightBlue }}
                   >
