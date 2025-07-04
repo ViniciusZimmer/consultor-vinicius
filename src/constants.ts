@@ -5,7 +5,7 @@ import image4 from "./assets/images/image4.webp";
 
 const header = {
   buttonText: "Solicitar Proposta",
-  whatsappNumber: "5541998564806",
+  whatsappNumber: "‪5541997342568‬",
 };
 
 const hero = {
@@ -29,10 +29,10 @@ const profileCard = {
   unitName: "Curitiba – PR",
   facebookLink: "https://www.facebook.com/affinitysegurosbrasilia",
   mapsLink: "https://g.co/kgs/QAkSJ9H",
-  whatsappLink: "https://wa.me/5541998564806",
+  whatsappLink: "https://wa.me/‪5541997342568‬",
   consorcioCanopusLink: "https://www.consorciocanopus.com.br/",
   naxOpenFinanceLink: "https://naxopenfinance.com",
-  phoneLink: "tel:+5541998564806",
+  phoneLink: "tel:+‪5541997342568‬",
   emailLink: "mailto:naxvinicius@gmail.com",
 };
 
@@ -106,8 +106,8 @@ const footer = {
     phone: "(41) 99856-4806",
     whatsapp: "(41) 99856-4806",
     emailLink: "mailto:naxvinicius@gmail.com",
-    phoneLink: "tel:+5541998564806",
-    whatsappLink: "https://wa.me/5541998564806",
+    phoneLink: "tel:+‪5541997342568‬",
+    whatsappLink: "https://wa.me/‪5541997342568‬",
   },
   address: {
     location: "Av. Manoel Ribas, 136 - Curitiba - PR",
