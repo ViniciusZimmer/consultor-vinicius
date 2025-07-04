@@ -31,7 +31,7 @@ const ConsortiumOverview = () => {
               <img
                 src={step.imageSrc}
                 alt={step.imageAlt}
-                className="w-full h-49 object-cover"
+                className="w-full h-40 object-cover"
               />
               <div className="p-6">
                 <h3
