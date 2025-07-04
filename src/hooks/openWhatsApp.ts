@@ -3,6 +3,6 @@ const openWhatsApp = (message?: string) => {
   const encodedMessage = encodeURIComponent(
     message || "Olá, gostaria de solicitar uma proposta de consórcio."
   );
-  window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, "_blank");
+  window.location.href = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 };
 export default openWhatsApp;
