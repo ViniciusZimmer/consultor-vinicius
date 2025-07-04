@@ -196,7 +196,10 @@ const ProfileCard = () => {
                 alignItems: "center",
               }}
             >
-              <LogoNax color={theme.colors.black} />
+              <LogoNax
+                color={theme.colors.black}
+                style={{ width: 120, height: "auto" }}
+              />
             </a>
           </div>
         </div>

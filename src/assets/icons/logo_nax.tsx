@@ -1,16 +1,14 @@
-interface LogoNaxProps {
-  // Defina as propriedades esperadas aqui, por exemplo:
-  color?: string;
-  size?: number;
-}
-const LogoNax = (props: LogoNaxProps) => (
+import type { JSX } from "react";
+
+const LogoNax = (
+  props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>
+) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     id="Camada_2"
     data-name="Camada 2"
     viewBox="0 0 139.64 48.71"
     {...props}
-    fill={props.color}
   >
     <defs>
       <style>{`.cls-1{fill:${props.color || "#000"}}.cls-2{fill:${

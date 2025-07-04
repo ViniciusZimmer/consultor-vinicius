@@ -1,4 +1,7 @@
-import pessoas from "./assets/images/Pessoas.png";
+import image1 from "./assets/images/image1.png";
+import image2 from "./assets/images/image2.png";
+import image3 from "./assets/images/image3.png";
+import image4 from "./assets/images/image4.png";
 
 const header = {
   buttonText: "Solicitar Proposta",
@@ -39,27 +42,26 @@ const consortiumOverview = {
       title: "Escolha seu objetivo",
       description: "Veja qual opção e condições servem melhor a você.",
       imageAlt: "Escolha seu objetivo",
-      imageSrc: pessoas,
+      imageSrc: image1,
     },
     {
       title: "Contribua mensalmente",
       description: "Contribua em dia para estar apto a ser contemplado.",
       imageAlt: "Contribua mensalmente",
-      imageSrc: "/images/contribua.jpg",
+      imageSrc: image2,
     },
     {
       title: "Fique de olho nas assembleias",
       description: "Acompanhe os sorteios ao vivo no Youtube da Canopus.",
       imageAlt: "Fique de olho nas assembleias",
-      imageSrc: "/images/assembleias.jpg",
+      imageSrc: image3,
     },
     {
       title: "Momento da Contemplação",
       description:
         "Você pode contemplar por meio de sorteio ou utilizar a oferta de lances em diferentes modalidades.",
       imageAlt: "Momento da Contemplação",
-      imageSrc: "/images/contemplacao.jpg",
-      faqLink: "/faq",
+      imageSrc: image4,
     },
   ],
 };

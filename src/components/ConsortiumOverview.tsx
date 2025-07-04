@@ -43,15 +43,6 @@ const ConsortiumOverview = () => {
                 <p className="text-sm" style={{ color: theme.colors.text }}>
                   {step.description}
                 </p>
-                {step.faqLink && (
-                  <a
-                    href={step.faqLink}
-                    className="text-sm underline mt-2 inline-block"
-                    style={{ color: theme.colors.teal }}
-                  >
-                    Saiba mais no FAQ
-                  </a>
-                )}
               </div>
             </div>
           ))}
