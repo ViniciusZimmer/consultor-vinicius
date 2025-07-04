@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+
 import { ChevronDown } from "lucide-react";
 import theme from "../theme";
 import { constants } from "../constants";
@@ -14,7 +14,11 @@ const FAQ = () => {
   };
 
   return (
-    <section className="py-16" style={{ backgroundColor: theme.colors.white }}>
+    <section
+      id="faq"
+      className="py-8"
+      style={{ backgroundColor: theme.colors.white }}
+    >
       <div className="max-w-4xl mx-auto px-4">
         {/* Título */}
         <div className="text-center mb-8">
@@ -31,7 +35,7 @@ const FAQ = () => {
         </div>
 
         {/* Lista FAQ */}
-        <div className="space-y-4">
+        <div className="space-y-4 pb-16">
           {constants.faq.faqs.map((faq, index) => (
             <div
               key={index}
@@ -52,35 +56,69 @@ const FAQ = () => {
                 }}
               >
                 <span>{faq.question}</span>
-                <motion.div
-                  animate={{ rotate: activeIndex === index ? 180 : 0 }}
-                  transition={{ duration: 0.15 }}
-                >
-                  <ChevronDown className="w-5 h-5" color={theme.colors.white} />
-                </motion.div>
+                <ChevronDown
+                  className={`w-5 h-5 transition-transform ${
+                    activeIndex === index ? "rotate-180" : ""
+                  }`}
+                  color={theme.colors.white}
+                />
               </button>
 
               {/* Resposta */}
-              <AnimatePresence initial={false}>
-                {activeIndex === index && (
-                  <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
-                    exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.18, ease: [0.4, 0, 0.2, 1] }}
-                    className="px-7 pb-6 pt-2 text-base leading-relaxed"
-                    style={{
-                      backgroundColor: theme.colors.background,
-                      color: theme.colors.text,
-                      borderTop: `1px solid ${theme.colors.lightBlue}`,
-                    }}
-                  >
-                    <div className="space-y-3">{faq.answer}</div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+              {activeIndex === index && (
+                <div
+                  className="px-7 pb-6 pt-2 text-base leading-relaxed"
+                  style={{
+                    backgroundColor: theme.colors.background,
+                    color: theme.colors.text,
+                    borderTop: `1px solid ${theme.colors.lightBlue}`,
+                  }}
+                >
+                  <div className="space-y-3">{faq.answer}</div>
+                </div>
+              )}
             </div>
           ))}
+        </div>
+
+        {/* Texto Inferior */}
+        <div
+          className="pt-4 mb-4 px-2"
+          style={{ borderColor: theme.colors.lightBlue }}
+        >
+          <div className="text-left">
+            <h3
+              className="mb-4"
+              style={{
+                color: theme.colors.black,
+                fontWeight: 700,
+                fontStyle: "normal",
+                fontSize: "32px",
+                lineHeight: "100%",
+                letterSpacing: "0%",
+              }}
+            >
+              {constants.faq.bottomText.mainText}{" "}
+              <span
+                className="font-bold"
+                style={{
+                  color: theme.colors.black,
+                  fontWeight: 700,
+                  fontSize: "32px",
+                }}
+              >
+                {constants.faq.bottomText.highlightedText}
+              </span>
+            </h3>
+            <p
+              style={{
+                color: theme.colors.text,
+                fontStyle: "normal",
+              }}
+            >
+              {constants.faq.bottomText.subText}
+            </p>
+          </div>
         </div>
       </div>
     </section>

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import theme from "../theme";
 import { constants } from "../constants";
-import { db } from "../firebaseConfig";
+import { db } from "../firebase";
 import { collection, addDoc } from "firebase/firestore";
 
 const Simulator = () => {

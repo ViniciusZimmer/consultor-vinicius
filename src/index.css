@@ -1,4 +1,7 @@
 @import "tailwindcss";
+@import "swiper/css";
+@import "swiper/css/pagination";
+@import "swiper/css/navigation";
 
 :root {
   font-family: "Interphases Pro", system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -6,24 +9,18 @@
 
 @font-face {
   font-family: "Interphases Pro";
-  src: url("./assets/fonts/tt_interphases_pro/TT Interphases Pro Trial Bold.ttf") format("truetype");
+  src: url("./assets/fonts/tt_interphases_pro/TT_Interphases_Pro_Trial_Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Interphases Pro";
-  src: url("./assets/fonts/tt_interphases_pro/TT Interphases Pro Trial Medium.ttf") format("truetype");
+  src: url("./assets/fonts/tt_interphases_pro/TT_Interphases_Pro_Trial_Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
 
-@font-face {
-  font-family: "Interphases Pro Mono";
-  src: url("./assets/fonts/tt_interphases_pro/TT Interphases Pro Mono Trial Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-}
 
 h1, h2 {
   font-family: "Interphases Pro", sans-serif;

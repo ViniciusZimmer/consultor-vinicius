@@ -7,8 +7,6 @@ import Footer from "./components/Footer";
 import FAQ from "./components/Faq";
 import AboutDifferentials from "./components/AboutDifferentials";
 
-// import Footer from "./components/Footer";
-
 function App() {
   return (
     <ThemeProvider>

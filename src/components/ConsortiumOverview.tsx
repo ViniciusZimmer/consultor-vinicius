@@ -4,6 +4,7 @@ import { constants } from "../constants";
 const ConsortiumOverview = () => {
   return (
     <section
+      id="HowItWorks"
       style={{ backgroundColor: theme.colors.background }}
       className="py-12"
     >
@@ -31,7 +32,7 @@ const ConsortiumOverview = () => {
               <img
                 src={step.imageSrc}
                 alt={step.imageAlt}
-                className="w-full h-40 object-cover"
+                className="w-full h-45 object-cover"
               />
               <div className="p-6">
                 <h3

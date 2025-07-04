@@ -1,18 +1,19 @@
 import theme from "../theme";
 import Simulator from "./Simulator";
 import { constants } from "../constants";
+import openWhatsApp from "../hooks/openWhatsApp";
 
 const Hero = () => {
   return (
     <section
-      className=" relative"
+      id="simulator"
+      className="relative"
       style={{
         backgroundColor: theme.colors.background,
       }}
     >
       <div className="mx-auto max-w-7xl px-4">
         <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-8 lg:gap-12">
-          {/* Conteúdo de Texto - Mobile First */}
           <div className="w-full lg:flex-1 text-center lg:text-left order-2 lg:order-1">
             <p
               className="uppercase tracking-wide text-xs sm:text-sm mb-3 sm:mb-4 font-medium"
@@ -42,6 +43,7 @@ const Hero = () => {
                   backgroundColor: theme.colors.primary,
                   color: theme.colors.white,
                 }}
+                onClick={() => openWhatsApp()}
               >
                 {constants.hero.buttonText}
               </button>

@@ -5,6 +5,7 @@ import image4 from "./assets/images/image4.webp";
 
 const header = {
   buttonText: "Solicitar Proposta",
+  whatsappNumber: "5541998564806",
 };
 
 const hero = {
@@ -90,6 +91,12 @@ const faq = {
         "No consórcio, você não paga entrada nem juros. É como ter dinheiro à vista no momento da compra, com mais poder de negociação. Além disso, pode usar o crédito para investir ou quitar outro financiamento 💸",
     },
   ],
+  bottomText: {
+    mainText: "Ainda tem dúvidas sobre como funciona o consórcio de",
+    highlightedText: "imóveis, carros ou motos?",
+    subText:
+      "Se quiser entender melhor as condições, simular um plano ou saber qual decisão combina mais com o seu objetivo, é só entrar em contato. Vamos te orientar de forma clara e sem compromisso, buscando a solução que funcione melhor para você.",
+  },
 };
 
 const footer = {

@@ -3,9 +3,16 @@ import theme from "../theme";
 import VSCLogo from "../assets/icons/VSCLogo";
 import { constants } from "../constants";
 import { XIcon, MenuIcon } from "lucide-react";
+import openWhatsApp from "../hooks/openWhatsApp";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleMenuClick = (id: string) => {
+    const element = document.querySelector(`#${id}`);
+    element?.scrollIntoView({ behavior: "smooth" });
+    setMenuOpen(false);
+  };
 
   return (
     <nav
@@ -37,6 +44,7 @@ const Header = () => {
               backgroundColor: theme.colors.primary,
               color: theme.colors.white,
             }}
+            onClick={() => openWhatsApp()}
           >
             {constants.header.buttonText}
           </button>
@@ -45,11 +53,23 @@ const Header = () => {
         {/* Menu Mobile (dropdown abaixo do header) */}
         {menuOpen && (
           <div className="absolute top-full left-0 w-full bg-black text-white px-6 py-4 space-y-4 z-20">
-            <a href="#sobre" className="block text-sm">
+            <a
+              onClick={() => handleMenuClick("profileCard")}
+              className="block text-sm cursor-pointer"
+            >
               Sobre mim
             </a>
-            <a href="#contato" className="block text-sm">
-              Contato
+            <a
+              onClick={() => handleMenuClick("HowItWorks")}
+              className="block text-sm cursor-pointer"
+            >
+              Como funciona o Consórcio
+            </a>
+            <a
+              onClick={() => handleMenuClick("faq")}
+              className="block text-sm cursor-pointer"
+            >
+              Perguntas Frequentes
             </a>
             <button
               className="w-full text-left font-bold px-4 py-3 rounded"
@@ -57,6 +77,7 @@ const Header = () => {
                 backgroundColor: theme.colors.primary,
                 color: theme.colors.white,
               }}
+              onClick={() => openWhatsApp()}
             >
               Solicitar proposta
             </button>

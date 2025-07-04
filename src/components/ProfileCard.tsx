@@ -13,6 +13,7 @@ const ProfileCard = () => {
           backgroundColor: theme.colors.white,
           color: theme.colors.primary,
         }}
+        id="profileCard"
         className="border-b py-12"
       >
         {/* Wave Design */}
