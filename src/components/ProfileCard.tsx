@@ -1,6 +1,6 @@
 import theme from "../theme";
-import nagua from "../assets/images/nagua.png";
-import backgroundImage from "../assets/images/background.png";
+import nagua from "../assets/images/nagua.webp";
+import backgroundImage from "../assets/images/background.webp";
 import LogoCanopus from "../assets/icons/logo_canopus";
 import LogoNax from "../assets/icons/logo_nax";
 import { constants } from "../constants";
