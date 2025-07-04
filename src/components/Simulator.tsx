@@ -1,8 +1,6 @@
 import { useState } from "react";
 import theme from "../theme";
 import { constants } from "../constants";
-import { db } from "../firebase";
-import { collection, addDoc } from "firebase/firestore";
 
 const Simulator = () => {
   const [step, setStep] = useState(1); // Controla o passo atual
@@ -76,16 +74,32 @@ const Simulator = () => {
 
   const handleSubmit = async () => {
     if (!validateForm()) return;
-
     setLoading(true);
     try {
-      await addDoc(collection(db, "simulations"), {
-        category: selectedCategory,
-        planType: selectedPlanType,
-        value,
-        ...formData,
-      });
-      setSubmissionStatus("success");
+      const response = await fetch(
+        `https://script.google.com/macros/s/${
+          import.meta.env.VITE_FIREBASE_API_KEY
+        }/exec`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            category: selectedCategory,
+            planType: selectedPlanType,
+            value,
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone,
+          }),
+        }
+      );
+
+      const result = await response.json();
+      if (result.success) {
+        setSubmissionStatus("success");
+      } else {
+        setSubmissionStatus("error");
+      }
     } catch (error) {
       console.error("Erro ao enviar simulação:", error);
       setSubmissionStatus("error");
