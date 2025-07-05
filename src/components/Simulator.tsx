@@ -76,18 +76,21 @@ const Simulator = () => {
     if (!validateForm()) return;
     setLoading(true);
     try {
-      const response = await fetch(`http://localhost:3000/api/sendTelegram`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          category: selectedCategory,
-          planType: selectedPlanType,
-          value,
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-        }),
-      });
+      const response = await fetch(
+        `http://telegram-jic0lzav4-viniciuszimmers-projects.vercel.app/api/sendTelegram`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            category: selectedCategory,
+            planType: selectedPlanType,
+            value,
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone,
+          }),
+        }
+      );
 
       const result = await response.json();
       if (result.success) {
