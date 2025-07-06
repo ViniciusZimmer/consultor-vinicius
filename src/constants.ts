@@ -9,10 +9,10 @@ const header = {
 };
 
 const hero = {
-  subtitle: "Transforme seu negócio",
-  title: "Soluções que impulsionam resultados",
+  subtitle: "Realize seus sonhos com o Consórcio Canopus",
+  title: "Sem juros, sem entrada e com parcelas acessíveis",
   description:
-    "Descubra como podemos ajudar você a alcançar seus objetivos com estratégias personalizadas e inovadoras.",
+    "Especialista em Consórcios Automotivos e Imobiliários em Curitiba e Região Metropolitana. Transforme suas metas em conquistas com quem entende do assunto!",
   buttonText: "Solicitar Proposta",
 };
 
@@ -22,7 +22,7 @@ const profileCard = {
     "Representante autorizado Consórcio Canopus e Nax Finance.",
   email: "naxvinicius@gmail.com",
   phone: "(41) 99856-4806",
-  whatsapp: "(41) 99856-4806 (WhatsApp)",
+  whatsapp: "(41) 99734-2568 (WhatsApp)",
   address: "Av. Manoel Ribas, 136 - Curitiba - PR",
   facebook: "Perfil Facebook",
   unitLabel: "Unidade:",
@@ -40,14 +40,14 @@ const consortiumOverview = {
   title: "Como funciona o Consórcio",
   steps: [
     {
-      title: "Escolha seu objetivo",
+      title: "Escolha seu bem",
       description: "Veja qual opção e condições servem melhor a você.",
-      imageAlt: "Escolha seu objetivo",
+      imageAlt: "Escolha seu bem",
       imageSrc: image1,
     },
     {
       title: "Contribua mensalmente",
-      description: "Contribua em dia para estar apto a ser contemplado.",
+      description: "Mantenha seus pagamentos em dia para estar apto a ser contemplado.",
       imageAlt: "Contribua mensalmente",
       imageSrc: image2,
     },
@@ -73,17 +73,17 @@ const faq = {
     {
       question: "Quanto tempo demora para ser contemplado?",
       answer:
-        "O proprietário da cota está apto ao sorteio desde a primeira assembleia, mas a data exata é imprevisível. Como consultor, te mostro como aumentar suas chances através de lances múltiplos.",
+        "O proprietário da cota está apto ao sorteio desde a primeira assembleia, mas a data exata é imprevisível. Como consultor especialista, mostro a você como aumentar as suas chances de contemplação através do estudo de gruposd e a utilização de lances múltiplos.",
     },
     {
       question: "Quais são as formas de lance?",
       answer:
-        "Lances são adiantamentos de parcelas. Se contemplado, o valor ofertado abate seu saldo devedor. Existem três tipos principais: Lance Livre, Lance Fixo e Lance Limitado.",
+        "Sim, é possível utilizar o seu FGTS no seu consórcio imobiliário, desde que você atenda a algumas regras definidas pela Caixa Econômica Federal. O saldo do FGTS pode ser utilizado em três principais situações: Trabalhar com carteira assinada há pelo menos 3 anos (Somando todas as experiências).\nEstar adquirindo o primeiro imóvel",
     },
     {
-      question: "Vocês possuem escritório presencial?",
+      question: "Vocês vendem para todo o Brasil?",
       answer:
-        "Sim! Estamos em Curitiba, na Av. Manoel Ribas, 136. Venha tomar um café e conversar sobre seus planos. ☕",
+        "Sim, comercializamos nossas soluções para todo o Brasil, e estamos localizados presencialmente em Curitiba na Av. Manoel Ribas, 136. Venha tomar um cafézinho com a gente, e conversar sobre o seu planejamento financeiro.",
     },
     {
       question: "Qual a diferença entre consórcio e financiamento?",
@@ -103,8 +103,8 @@ const footer = {
   description: "Representante autorizado Consórcio Canopus e Nax Finance.",
   contact: {
     email: "naxvinicius@gmail.com",
-    phone: "(41) 99856-4806",
-    whatsapp: "(41) 99856-4806",
+    phone: "(41) 99734-2568",
+    whatsapp: "(41) 99734-2568",
     emailLink: "mailto:naxvinicius@gmail.com",
     phoneLink: "tel:+5541997342568",
     whatsappLink: "https://wa.me/5541997342568",
