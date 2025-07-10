@@ -18,7 +18,7 @@ const CustomerStories = () => {
           style={{ color: theme.colors.white }}
           className="w-full my-2 text-3xl font-bold leading-tight text-center"
         >
-          Veja o que falam nossos clientes
+          Veja o que nossos clientes falam
         </h4>
         <div className="w-full mb-4">
           <div
