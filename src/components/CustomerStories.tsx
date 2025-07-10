@@ -4,10 +4,7 @@ import theme from "../theme";
 import { useState } from "react";
 
 const CustomerStories = () => {
-  const videos = [
-    "src/assets/videos/relato1.webm",
-    "src/assets/videos/relato2.webm",
-  ];
+  const videos = ["/videos/relato1.webm", "/videos/relato2.webm"];
 
   const [selectedIndex, setSelectedIndex] = useState(0);
 
