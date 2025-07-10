@@ -52,6 +52,7 @@ const CustomerStories = () => {
                 controls
                 playsInline
                 src={videoSrc}
+                poster={`/videos/relato${index + 1}.png`}
               >
                 Seu navegador não suporta o elemento de vídeo.
               </video>
