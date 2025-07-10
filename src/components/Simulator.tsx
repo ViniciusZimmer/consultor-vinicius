@@ -1,6 +1,7 @@
 import { useState } from "react";
 import theme from "../theme";
 import { constants } from "../constants";
+import sendTelegramMessage from "../hooks/sendTelegramMessage";
 
 const Simulator = () => {
   const [step, setStep] = useState(1); // Controla o passo atual
@@ -43,11 +44,21 @@ const Simulator = () => {
     }
   };
 
+  const maskPhone = (event: React.FormEvent<HTMLInputElement>) => {
+    event.currentTarget.maxLength = 15;
+    const { value } = event.currentTarget;
+    return value
+      .replace(/\D/g, "")
+      .replace(/(\d{2})(\d)/, "($1) $2")
+      .replace(/(\d{5})(\d{4})/, "$1-$2");
+  };
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked } = e.target;
+    const formattedValue = name === "phone" ? maskPhone(e) : value;
     setFormData((prev) => ({
       ...prev,
-      [name]: type === "checkbox" ? checked : value,
+      [name]: type === "checkbox" ? checked : formattedValue,
     }));
     setErrors((prev) => ({ ...prev, [name]: "" })); // Limpa erro ao digitar
   };
@@ -76,23 +87,15 @@ const Simulator = () => {
     if (!validateForm()) return;
     setLoading(true);
     try {
-      const response = await fetch(
-        `http://telegram-jic0lzav4-viniciuszimmers-projects.vercel.app/api/sendTelegram`,
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            category: selectedCategory,
-            planType: selectedPlanType,
-            value,
-            name: formData.name,
-            email: formData.email,
-            phone: formData.phone,
-          }),
-        }
-      );
+      const result = await sendTelegramMessage({
+        category: selectedCategory,
+        planType: selectedPlanType,
+        value,
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+      });
 
-      const result = await response.json();
       if (result.success) {
         setSubmissionStatus("success");
       } else {
