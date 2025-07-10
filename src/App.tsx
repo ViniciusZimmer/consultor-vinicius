@@ -6,6 +6,7 @@ import ConsortiumOverview from "./components/ConsortiumOverview";
 import Footer from "./components/Footer";
 import FAQ from "./components/Faq";
 import AboutDifferentials from "./components/AboutDifferentials";
+import CustomerStories from "./components/CustomerStories";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <ConsortiumOverview />
         <FAQ />
         <AboutDifferentials />
+        <CustomerStories />
         <Footer />
       </div>
     </ThemeProvider>
