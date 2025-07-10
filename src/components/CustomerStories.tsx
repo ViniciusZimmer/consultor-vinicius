@@ -45,7 +45,7 @@ const CustomerStories = () => {
           {videos.map((videoSrc, index) => (
             <div
               key={index}
-              className="aspect-[9/16] rounded-2xl shadow-xl overflow-hidden bg-black"
+              className="aspect-[9/16] rounded-2xl shadow-xl overflow-hidden bg-black mr-4"
             >
               <video
                 className="w-full h-full object-cover"
