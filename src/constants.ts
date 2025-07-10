@@ -74,12 +74,12 @@ const faq = {
     {
       question: "Quanto tempo demora para ser contemplado?",
       answer:
-        "O proprietário da cota está apto ao sorteio desde a primeira assembleia, mas a data exata é imprevisível. Como consultor especialista, mostro a você como aumentar as suas chances de contemplação através do estudo de gruposd e a utilização de lances múltiplos.",
+        "O proprietário da cota está apto ao sorteio desde a primeira assembleia, mas a data exata é imprevisível. Como consultor especialista, mostro a você como aumentar as suas chances de contemplação através do estudo de grupos e a utilização de lances múltiplos.",
     },
     {
       question: "Quais são as formas de lance?",
       answer:
-        "Sim, é possível utilizar o seu FGTS no seu consórcio imobiliário, desde que você atenda a algumas regras definidas pela Caixa Econômica Federal. O saldo do FGTS pode ser utilizado em três principais situações: Trabalhar com carteira assinada há pelo menos 3 anos (Somando todas as experiências).\nEstar adquirindo o primeiro imóvel",
+        "Sim, é possível utilizar o seu FGTS no seu consórcio imobiliário, desde que você atenda a algumas regras definidas pela Caixa Econômica Federal. O saldo do FGTS pode ser utilizado em três principais situações:\n\n- Trabalhar com carteira assinada há pelo menos 3 anos (somando todas as experiências)\n- Estar adquirindo o primeiro imóvel\n- Não possuir financiamento ativo no SFH (Sistema Financeiro de Habitação) em nenhum local do Brasil\n\nO uso do seu FGTS é uma excelente estratégia para antecipar a conquista da sua casa própria, sem pagar juros, como ocorre com o financiamento tradicional.",
     },
     {
       question: "Vocês vendem para todo o Brasil?",

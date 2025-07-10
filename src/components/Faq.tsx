@@ -74,7 +74,11 @@ const FAQ = () => {
                     borderTop: `1px solid ${theme.colors.lightBlue}`,
                   }}
                 >
-                  <div className="space-y-3">{faq.answer}</div>
+                  <div className="space-y-3">
+                    {faq.answer.split("\n").map((line, idx) => (
+                      <p key={idx}>{line}</p>
+                    ))}
+                  </div>
                 </div>
               )}
             </div>
