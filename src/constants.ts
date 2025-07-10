@@ -21,7 +21,7 @@ const profileCard = {
   sellerDescription:
     "Representante autorizado Consórcio Canopus e Nax Finance.",
   email: "naxvinicius@gmail.com",
-  phone: "(41) 99856-4806",
+  phone: "(41) 99734-2568",
   whatsapp: "(41) 99734-2568 (WhatsApp)",
   address: "Av. Manoel Ribas, 136 - Curitiba - PR",
   facebook: "Perfil Facebook",
@@ -47,7 +47,8 @@ const consortiumOverview = {
     },
     {
       title: "Contribua mensalmente",
-      description: "Mantenha seus pagamentos em dia para estar apto a ser contemplado.",
+      description:
+        "Mantenha seus pagamentos em dia para estar apto a ser contemplado.",
       imageAlt: "Contribua mensalmente",
       imageSrc: image2,
     },

@@ -4,9 +4,11 @@ import theme from "../theme";
 
 import CreditScoreIcon from "@mui/icons-material/CreditScore";
 import GroupIcon from "@mui/icons-material/Group";
-import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
+
 import SmartphoneIcon from "@mui/icons-material/Smartphone";
 import MoneyOffIcon from "@mui/icons-material/MoneyOff";
+import TrackChanges from "@mui/icons-material/TrackChanges";
+import MilitaryTech from "@mui/icons-material/MilitaryTech";
 
 import MilitaryTechIcon from "@mui/icons-material/MilitaryTech";
 import StarRateIcon from "@mui/icons-material/StarRate";
@@ -27,14 +29,16 @@ const AboutDifferentials = () => {
         />
       ),
       title: "18 Anos de Experiência",
-      description: "Quase duas décadas no segmento de consórcio.",
+      description:
+        "Quase duas décadas no segmento de consórcios, e com mais de 50 anos de existência.",
     },
     {
       icon: (
         <StarRateIcon fontSize="large" sx={{ color: theme.colors.primary }} />
       ),
-      title: "Maior Taxa de Contemplação",
-      description: "O melhor índice de contemplação do Brasil.",
+      title: "Líder do centro oeste",
+      description:
+        "Atuação destacada na administração de consórcios das principais marcas automotivas do país.",
     },
     {
       icon: (
@@ -44,7 +48,8 @@ const AboutDifferentials = () => {
         />
       ),
       title: "Marcas Renomadas",
-      description: "Toyota, BMW, Mini, Chery e Honda.",
+      description:
+        "Administração de marcas como: Toyota, BMW, Mini, Chery e Motos Honda.",
     },
   ];
 
@@ -75,15 +80,28 @@ const AboutDifferentials = () => {
     },
     {
       icon: (
-        <EmojiEventsIcon
+        <MilitaryTech
           fontSize="large"
           sx={{
             color: theme.colors.primary,
           }}
         />
       ),
-      title: "Líder Centro-Oeste",
-      description: "Maior administradora da região.",
+      title: "Maior número de contemplações do mercado",
+      description: "Grupos reduzidos e com alta taxa de contemplação.",
+    },
+    {
+      icon: (
+        <TrackChanges
+          fontSize="large"
+          sx={{
+            color: theme.colors.primary,
+          }}
+        />
+      ),
+      title: "Grupos multi lances",
+      description:
+        "Possibilidade de lance com recurso próprio e/ou recurso embutido.",
     },
     {
       icon: (
