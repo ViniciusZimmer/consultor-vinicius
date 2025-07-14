@@ -8,7 +8,7 @@ const FloatingButton = () => {
     >
       <img
         onClick={() => openWhatsApp()}
-        src="src/assets/icons/whatsapp.svg"
+        src="public/whatsapp.svg"
         alt="WhatsApp"
       />
     </button>
