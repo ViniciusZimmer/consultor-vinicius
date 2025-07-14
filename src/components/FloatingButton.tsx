@@ -6,11 +6,7 @@ const FloatingButton = () => {
       className="fixed bottom-5 right-5 w-12 h-12 flex items-center justify-center cursor-pointer z-50"
       onClick={() => openWhatsApp()}
     >
-      <img
-        onClick={() => openWhatsApp()}
-        src="public/whatsapp.svg"
-        alt="WhatsApp"
-      />
+      <img onClick={() => openWhatsApp()} src="/whatsapp.svg" alt="WhatsApp" />
     </button>
   );
 };
