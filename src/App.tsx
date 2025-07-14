@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import FAQ from "./components/Faq";
 import AboutDifferentials from "./components/AboutDifferentials";
 import CustomerStories from "./components/CustomerStories";
+import FloatingButton from "./components/FloatingButton";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <AboutDifferentials />
         <CustomerStories />
         <Footer />
+        <FloatingButton />
       </div>
     </ThemeProvider>
   );
