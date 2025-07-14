@@ -3,6 +3,9 @@ import theme from "../theme";
 import { constants } from "../constants";
 import sendTelegramMessage from "../hooks/sendTelegramMessage";
 
+import { Modal, Box, Typography, IconButton } from "@mui/material";
+import CloseIcon from "@mui/icons-material/Close";
+
 const Simulator = () => {
   const [step, setStep] = useState(1); // Controla o passo atual
   const [value, setValue] = useState(1000); // Valor do crédito ou parcela
@@ -27,6 +30,11 @@ const Simulator = () => {
     "success" | "error" | null
   >(null);
   const [loading, setLoading] = useState(false);
+
+  const [openTermsModal, setOpenTermsModal] = useState(false);
+
+  const handleOpenTermsModal = () => setOpenTermsModal(true);
+  const handleCloseTermsModal = () => setOpenTermsModal(false);
 
   const handleCategoryClick = (category: string) =>
     setSelectedCategory(category);
@@ -108,6 +116,15 @@ const Simulator = () => {
       setStep(3);
       setLoading(false);
     }
+  };
+
+  const isFormValid = () => {
+    return (
+      formData.name.trim() &&
+      formData.email.trim() &&
+      formData.phone.trim() &&
+      formData.termsAccepted
+    );
   };
 
   return (
@@ -335,7 +352,17 @@ const Simulator = () => {
                 className="text-sm font-medium"
                 style={{ color: theme.colors.black }}
               >
-                Aceito os Termos de Privacidade *
+                Aceito os{" "}
+                <span
+                  onClick={handleOpenTermsModal}
+                  style={{
+                    fontWeight: "bold",
+                    cursor: "pointer",
+                    color: theme.colors.black,
+                  }}
+                >
+                  Termos de Privacidade
+                </span>
               </label>
             </div>
             {errors.termsAccepted && (
@@ -365,7 +392,7 @@ const Simulator = () => {
                 color: theme.colors.white,
                 opacity: loading ? 0.6 : 1,
               }}
-              disabled={loading}
+              disabled={!isFormValid() || loading}
             >
               {loading ? "Enviando..." : "Resultado"}
             </button>
@@ -462,6 +489,139 @@ const Simulator = () => {
           )}
         </>
       )}
+      <Modal open={openTermsModal} onClose={handleCloseTermsModal}>
+        <Box
+          sx={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            width: "90%",
+            maxWidth: 550,
+            bgcolor: "#fff",
+            borderRadius: 3,
+            boxShadow: 24,
+            outline: "none",
+            display: "flex",
+            flexDirection: "column",
+            maxHeight: "90vh",
+          }}
+        >
+          {/* Cabeçalho */}
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              px: 3,
+              py: 2,
+              borderBottom: "1px solid #eee",
+              backgroundColor: theme.colors.black,
+              borderTopLeftRadius: 12,
+              borderTopRightRadius: 12,
+            }}
+          >
+            <Typography
+              variant="h6"
+              sx={{ fontWeight: 600, color: theme.colors.primary }}
+            >
+              Termos de Responsabilidade
+            </Typography>
+            <IconButton
+              onClick={handleCloseTermsModal}
+              sx={{ color: theme.colors.primary }}
+            >
+              <CloseIcon />
+            </IconButton>
+          </Box>
+
+          {/* Conteúdo rolável */}
+          <Box
+            sx={{
+              overflowY: "auto",
+              px: 3,
+              py: 2,
+              color: theme.colors.black,
+              fontSize: "0.95rem",
+              lineHeight: 1.7,
+            }}
+          >
+            <Typography>
+              <strong>POLÍTICA DE PRIVACIDADE</strong>
+              <br />
+              A presente Política de Privacidade tem por finalidade demonstrar o
+              compromisso da NAX OPEN FINANCE, representada por EVOLUX SOLUÇÕES
+              FINANCEIRAS E EMPRESARIAIS LTDA, pessoa jurídica de direito
+              privado, inscrita no CNPJ sob nº 51.605.553/0001-09, com sede à
+              RUA MARECHAL DEODORO, 450, CONJ. 1008, ANDAR 10, COND. MAURICIO
+              CAILLET, CENTRO, CURITIBA - BRASIL, com a privacidade e a proteção
+              dos dados pessoais coletados no desenvolvimento de suas
+              atividades.
+              <br />
+              <br />
+              <strong>QUAIS DADOS PESSOAIS COLETAMOS?</strong>
+              <br />
+              Para o regular desenvolvimento de nossa atividade, coletamos dados
+              pessoais de nossos clientes, fornecedores, colaboradores e
+              parceiros de negócio, respeitando sempre os princípios da Lei
+              Geral de Proteção de Dados, tais como a minimização dos dados,
+              finalidade e transparência.
+              <br />
+              <br />
+              <strong>POR QUE UTILIZAMOS OS SEUS DADOS?</strong>
+              <br />
+              Para ofertar produtos e serviços a você; firmar contratos; nos
+              comunicarmos; e cumprir nossas obrigações legais e regulatórias.
+              Os dados são utilizados para identificação, perfilamento, gestão,
+              atendimento, expansão e aprimoramento de nossos serviços.
+              <br />
+              <br />
+              <strong>COMO PROTEGEMOS SEUS DADOS?</strong>
+              <br />
+              Adotamos práticas de segurança da informação compatíveis com o
+              nosso setor, incluindo criptografia, controle de acessos,
+              políticas internas de privacidade, capacitação de equipes e
+              auditorias frequentes.
+              <br />
+              <br />
+              <strong>CUMPRIMENTO AOS DIREITOS DO TITULAR</strong>
+              <br />
+              A NAX OPEN FINANCE assegura os direitos previstos na LGPD, como
+              confirmação e acesso aos dados tratados, correção de dados,
+              anonimização, bloqueio ou eliminação de dados, portabilidade, e
+              revogação do consentimento.
+              <br />
+              <br />
+              <strong>COMPARTILHAMENTO DE DADOS</strong>
+              <br />
+              Os dados coletados são de responsabilidade da NAX OPEN FINANCE e
+              só são compartilhados com fornecedores e parceiros, autoridades
+              públicas, ou empresas do mesmo grupo, respeitando esta Política de
+              Privacidade.
+              <br />
+              <br />
+              <strong>TRANSFERÊNCIA INTERNACIONAL DE DADOS</strong>
+              <br />
+              Alguns dados podem ser transferidos para fora do Brasil por conta
+              de fornecedores que estejam no exterior, desde que assegurado o
+              mesmo nível de proteção previsto na legislação brasileira.
+              <br />
+              <br />
+              <strong>PRAZO DE RETENÇÃO DOS DADOS</strong>
+              <br />
+              Os dados são mantidos pelo tempo necessário para cumprimento das
+              finalidades para as quais foram coletados, ou para o cumprimento
+              de obrigações legais, regulatórias e contratuais.
+              <br />
+              <br />
+              <strong>CONTATO DO DPO</strong>
+              <br />
+              E-mail para contato com o Encarregado de Proteção de Dados:
+              naxvinicius@gmail.com
+            </Typography>
+          </Box>
+        </Box>
+      </Modal>
     </div>
   );
 };
