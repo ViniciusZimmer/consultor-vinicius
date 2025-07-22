@@ -7,7 +7,7 @@ declare global {
   }
 }
 
-export function initializeGtag(trackingId: string): void {
+export function initializeGtag(): void {
   if (!window.dataLayer) {
     window.dataLayer = [];
   }
@@ -15,6 +15,14 @@ export function initializeGtag(trackingId: string): void {
   window.gtag = function gtag(action: string, params: Record<string, unknown>) {
     window.dataLayer.push({ action, ...params });
   };
+
+  const trackingId = import.meta.env.VITE_GOOGLE_TAG_ID;
+  if (!trackingId) {
+    console.error(
+      "O ID de rastreamento do Google Tag Manager não está definido."
+    );
+    return;
+  }
 
   const script = document.createElement("script");
   script.async = true;
@@ -25,15 +33,4 @@ export function initializeGtag(trackingId: string): void {
   window.gtag("config", { trackingId });
 }
 
-export function initializeGtagFromEnv(): void {
-  const trackingId = import.meta.env.VITE_GOOGLE_TAG_ID;
-
-  if (!trackingId) {
-    console.error(
-      "O ID de rastreamento do Google Tag Manager não está definido."
-    );
-    return;
-  }
-
-  initializeGtag(trackingId);
-}
+initializeGtag();
