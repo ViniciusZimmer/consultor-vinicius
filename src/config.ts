@@ -34,3 +34,17 @@ export function initializeGtag(): void {
 }
 
 initializeGtag();
+
+export function sendConversionEvent(eventId: string): void {
+  if (!window.gtag) {
+    console.error(
+      "A função gtag não está definida. Certifique-se de que o Google Tag Manager foi inicializado."
+    );
+    return;
+  }
+
+  window.gtag("event", {
+    event_name: "conversion",
+    send_to: eventId,
+  });
+}

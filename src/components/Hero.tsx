@@ -2,6 +2,7 @@ import theme from "../theme";
 import Simulator from "./Simulator";
 import { constants } from "../constants";
 import openWhatsApp from "../hooks/openWhatsApp";
+import { sendConversionEvent } from "../config";
 
 const Hero = () => {
   return (
@@ -43,7 +44,10 @@ const Hero = () => {
                   backgroundColor: theme.colors.primary,
                   color: theme.colors.white,
                 }}
-                onClick={() => openWhatsApp()}
+                onClick={() => {
+                  openWhatsApp();
+                  sendConversionEvent("AW-17355560233/f9qmCIbf-fAaEKmq49NA");
+                }}
               >
                 {constants.hero.buttonText}
               </button>

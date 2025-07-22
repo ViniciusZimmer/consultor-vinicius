@@ -2,6 +2,7 @@ import { useState } from "react";
 import theme from "../theme";
 import { constants } from "../constants";
 import sendTelegramMessage from "../hooks/sendTelegramMessage";
+import { sendConversionEvent } from "../config";
 
 import { Modal, Box, Typography, IconButton } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
@@ -106,6 +107,7 @@ const Simulator = () => {
 
       if (result.success) {
         setSubmissionStatus("success");
+        sendConversionEvent("AW-17355560233/f9qmCIbf-fAaEKmq49NA");
       } else {
         setSubmissionStatus("error");
       }
